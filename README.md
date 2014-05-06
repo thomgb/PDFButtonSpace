@@ -8,3 +8,5 @@ Adds a PDF button to the Space Center.
 Creates a PDF file on the Desktop and opens it with the default PDF-reader.
 
 Thom Janssen / GeenBitter 2014
+
+merci to: Jackson Cavanaugh for the ‘add button’ parts
