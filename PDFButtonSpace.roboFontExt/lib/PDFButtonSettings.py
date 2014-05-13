@@ -38,7 +38,7 @@ class PDFSettings(object):
 
 		y+=50
 		# time stamp
-		self.w.timeStampOnOff = CheckBox((10, y, -10, 25), "Add time stamp:", value=getExtensionDefault(_PDFTimeStampOnOffKey), callback=self._warning, sizeStyle='small')
+		self.w.timeStampOnOff = CheckBox((10, y, -10, 25), "Add timestamp:", value=getExtensionDefault(_PDFTimeStampOnOffKey), callback=self._warning, sizeStyle='small')
 		self.w.timeStamp = EditText((125,y, -10, 25), text=getExtensionDefault(_PDFTimeStampKey), continuous=False, callback=self._warning)
 		self.w.timestampInfo = Button((125,y+28,-10,20),"timestamp syntax docs", callback=self.timeStampInfoCallback, sizeStyle='small')
 
@@ -93,7 +93,7 @@ class PDFSettings(object):
 		setExtensionDefault(_PDFFolderPathKey, newPath[0])
 
 	def timeStampInfoCallback(self, sender):
-		self.b = Window((800, 450), minSize=(200, 200), title='Time Stamp Docs')
+		self.b = Window((800, 450), minSize=(200, 200), title='Timestamp Docs')
 		items = [
 			dict(image=NSImage.imageNamed_(NSImageNameGoLeftTemplate), toolTip='back'), 
 			dict(image=NSImage.imageNamed_(NSImageNameGoRightTemplate), toolTip='forward')
