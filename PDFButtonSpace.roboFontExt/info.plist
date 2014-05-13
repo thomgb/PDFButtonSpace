@@ -3,7 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>addToMenu</key>
-	<array/>
+	<array>
+		<dict>
+			<key>path</key>
+			<string>PDFButtonSettings.py</string>
+			<key>preferredName</key>
+			<string>PDF Settings</string>
+			<key>shortKey</key>
+			<string></string>
+		</dict>
+	</array>
 	<key>developer</key>
 	<string>Thom Janssen</string>
 	<key>developerURL</key>
