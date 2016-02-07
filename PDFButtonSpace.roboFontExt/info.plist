@@ -28,10 +28,13 @@
 	<key>timeStamp</key>
 	<real>1399371622.6128809</real>
 	<key>version</key>
-	<string>1.1</string>
+	<string>1.2</string>
 	<key>repository</key>
 	<string>thomgb/PDFButtonSpace</string>
 	<key>extensionPath</key>
 	<string>PDFButtonSpace.roboFontExt</string>
+	<key>summary</key>
+  	<string>Adds a PDF button to the SpaceCenter, generate PDFs of the SpaceCenter.</string>
+
 </dict>
 </plist>
