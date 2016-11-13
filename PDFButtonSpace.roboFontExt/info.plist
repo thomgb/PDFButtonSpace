@@ -16,7 +16,7 @@
 	<key>developer</key>
 	<string>Thom Janssen</string>
 	<key>developerURL</key>
-	<string>http://www.geenbitter.nl</string>
+	<string>http://www.hallotype.nl</string>
 	<key>html</key>
 	<false/>
 	<key>launchAtStartUp</key>
@@ -34,7 +34,7 @@
 	<key>extensionPath</key>
 	<string>PDFButtonSpace.roboFontExt</string>
 	<key>summary</key>
-  	<string>Adds a PDF button to the SpaceCenter, generate PDFs of the SpaceCenter.</string>
+  	<string>Adds PopUpButton to SpaceCenter. For making PDFs, Blur to SC, add tracking, and more...</string>
 
 </dict>
 </plist>
