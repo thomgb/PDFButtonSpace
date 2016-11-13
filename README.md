@@ -1,12 +1,8 @@
-PDF Button Space
-==========
-
 A RoboFont extension.
 
-Adds a PDF button to the Space Center.
+Adds a PopUpButton to the SpaceCenter with nice functions.
 
-Creates a PDF file on the Desktop and opens it with the default PDF-reader.
+Thom Janssen / HalloType 2014-2016
 
-Thom Janssen / GeenBitter 2014
-
-merci to: Jackson Cavanaugh for the ‘add button’ parts
+merci to: Jackson Cavanaugh for the ‘add button’ parts,
+and Frederik Berlaen for a l-o-t
