@@ -11,7 +11,6 @@ from vanilla import *
 from mojo.UI import CurrentSpaceCenter, SpaceCenterToPDF
 from mojo.extensions import getExtensionDefault
 import os
-from drawBot import *
 from AppKit import *
 from defconAppKit.windows.baseWindow import BaseWindowController
 
