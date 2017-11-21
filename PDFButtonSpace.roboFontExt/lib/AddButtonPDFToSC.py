@@ -1,3 +1,4 @@
+# coding=utf-8
 """
 TODO:
 	file name fontname / stylename prefixes
@@ -13,6 +14,8 @@ from mojo.extensions import getExtensionDefault
 import os
 from AppKit import *
 from defconAppKit.windows.baseWindow import BaseWindowController
+import subprocess
+
 
 event = "spaceCenterDidOpen" 
 
@@ -23,6 +26,7 @@ _PDFFolderKey = "%s.Folder" % PDFKey
 _PDFTimeStampOnOffKey = "%s.TimeStampOnOff" % PDFKey
 _PDFTimeStampKey = "%s.TimeStamp" % PDFKey
 _PDFOpenPDFKey = "%s.OpenKey" % PDFKey
+_PDFTextLimitKey = "%s.TextLimit" % PDFKey
 
 popUpItems = [
 	"PDF",
@@ -149,11 +153,19 @@ class FunWithTheSpaceCenter(object):
 
 			filename = '%s/%s%s.pdf' % (folder,getExtensionDefault(_PDFFileNameKey),timestamp)
 
+			filename = filename.replace("%ufo", os.path.splitext(os.path.basename(CurrentFont().path))[0])
+			
 			SC = CurrentSpaceCenter()
+			filename = filename.replace("%text", SC.getRaw()[0:int(getExtensionDefault(_PDFTextLimitKey))])
+
+			
 			SpaceCenterToPDF(filename, spaceCenter=SC)
 
 			if getExtensionDefault(_PDFOpenPDFKey):
-				os.system("open "+filename)
+				try:
+					os.system("open '%s'" % filename)
+				except:
+					subprocess.call(["open", "-R", filename])
 
 		if popUpItems[sender.get()] == "Blur":
 			Blurryfyer()
