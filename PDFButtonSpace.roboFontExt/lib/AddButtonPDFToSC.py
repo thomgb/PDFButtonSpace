@@ -156,14 +156,24 @@ class FunWithTheSpaceCenter(object):
 			filename = filename.replace("%ufo", os.path.splitext(os.path.basename(CurrentFont().path))[0])
 			
 			SC = CurrentSpaceCenter()
-			filename = filename.replace("%text", SC.getRaw()[0:int(getExtensionDefault(_PDFTextLimitKey))])
+			tsc = SC.get()
+			t=""
+			for i in tsc[0:int(getExtensionDefault(_PDFTextLimitKey))]:
+				if i == "space":
+					i = "_"
+				if len(i) > 1:
+					i=":%s" % i
+				t+=i
+			print t
+			filename = filename.replace("%text", t)
+			print filename
 
 			
 			SpaceCenterToPDF(filename, spaceCenter=SC)
 
 			if getExtensionDefault(_PDFOpenPDFKey):
 				try:
-					os.system("open '%s'" % filename)
+					os.system(u"open '%s'" % filename)
 				except:
 					subprocess.call(["open", "-R", filename])
 
