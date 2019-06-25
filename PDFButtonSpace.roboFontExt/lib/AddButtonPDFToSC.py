@@ -164,9 +164,9 @@ class FunWithTheSpaceCenter(object):
 				if len(i) > 1:
 					i=":%s" % i
 				t+=i
-			print t
+			print(t)
 			filename = filename.replace("%text", t)
-			print filename
+			print(filename)
 
 			
 			SpaceCenterToPDF(filename, spaceCenter=SC)
